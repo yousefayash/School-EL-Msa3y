@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Admin Login | مدرسة المساعي الثانوية
+  </title>
+  <link href="css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="top">
+   <div class="container">
+    مدرسة المساعي الثانوية العسكرية بنين &mdash; تعليم، انضباط، إعداد للمستقبل
+   </div>
+  </div>
+  <header class="header">
+   <div class="container nav">
+    <a class="brand" href="index.html">
+     <span class="brand-mark">
+      م
+     </span>
+     مدرسة المساعي الثانوية
+    </a>
+    <button aria-label="فتح القائمة" class="menu-toggle" type="button">
+     ☰
+    </button>
+    <nav class="links">
+     <a href="index.html">
+      الرئيسية
+     </a>
+     <a href="about.html">
+      عن المدرسة
+     </a>
+     <a href="academic.html">
+      التعليم والطلاب
+     </a>
+     <a href="news.html">
+      الأخبار
+     </a>
+     <a href="gallery.html">
+      الأنشطة
+     </a>
+     <a href="services.html">
+      القبول والتسجيل
+     </a>
+     <a href="contact.html">
+      تواصل معنا
+     </a>
+    </nav>
+    <a class="admin-btn" href="admin.html" id="adminNav">
+     Admin Login
+    </a>
+   </div>
+  </header>
+  <main class="admin-page">
+   <div class="login-box" id="loginView">
+    <h1>
+     Admin Login
+    </h1>
+    <p>
+     تسجيل دخول إدارة مدرسة المساعي
+    </p>
+    <form class="form" id="adminLogin">
+     <div class="field">
+      <label>
+       Username
+      </label>
+      <input autocomplete="username" id="username" required=""/>
+     </div>
+     <div class="field">
+      <label>
+       Password
+      </label>
+      <input autocomplete="current-password" id="password" required="" type="password"/>
+     </div>
+     <p id="loginError" style="color:#b42318">
+     </p>
+     <button class="btn" type="submit">
+      دخول لوحة الإدارة
+     </button>
+     <a class="btn alt" href="index.html" style="background:#000">
+      الموقع
+     </a>
+    </form>
+   </div>
+   <div class="dashboard" id="dashView">
+    <div class="dash-head">
+     <div class="container dash-nav">
+      <strong>
+       لوحة إدارة مدرسة المساعي
+      </strong>
+      <span class="spacer">
+      </span>
+      <a class="btn" href="index.html">
+       الموقع
+      </a>
+      <button class="btn danger" onclick="logout()">
+       تسجيل خروج
+      </button>
+     </div>
+    </div>
+    <div class="container">
+     <div class="dash-grid">
+      <div class="dash-card">
+       إجمالي الطلبات
+       <strong id="total">
+        0
+       </strong>
+      </div>
+      <div class="dash-card">
+       طلبات مسجلة
+       <strong id="today">
+        0
+       </strong>
+      </div>
+      <div class="dash-card">
+       نوع اللوحة
+       <strong>
+        Backend
+       </strong>
+      </div>
+      <div class="dash-card">
+       الحالة
+       <strong>
+        متصلة بالخادم
+       </strong>
+      </div>
+     </div>
+     <div class="card">
+      <div style="display:flex;justify-content:space-between;gap:10px;align-items:center">
+       <h2>
+        طلبات التسجيل
+       </h2>
+       <button class="btn danger" onclick="clearRegs()">
+        مسح كل الطلبات
+       </button>
+      </div>
+      <div class="table-wrap">
+       <table class="table">
+        <thead>
+         <tr>
+          <th>
+           الطالب
+          </th>
+          <th>
+           الصف
+          </th>
+          <th>
+           الهاتف
+          </th>
+          <th>
+           البريد
+          </th>
+          <th>
+           التاريخ
+          </th>
+          <th>
+           الحالة
+          </th>
+         </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+       </table>
+      </div>
+     </div>
+    </div>
+   </div>
+  </main>
+  <footer class="footer">
+   <div class="container footer-grid">
+    <div>
+     <h3>
+      مدرسة المساعي الثانوية
+     </h3>
+     <p>
+      منظومة تعليمية وانضباطية تهدف إلى إعداد طلاب قادرين على تحمل المسؤولية وخدمة وطنهم.
+     </p>
+    </div>
+    <div>
+     <h3>
+      روابط
+     </h3>
+     <p>
+      <a href="about.html">
+       عن المدرسة
+      </a>
+     </p>
+     <p>
+      <a href="services.html">
+       القبول والتسجيل
+      </a>
+     </p>
+    </div>
+    <div>
+     <h3>
+      تواصل
+     </h3>
+     <p>
+      المنوفية &mdash; شبين الكوم
+     </p>
+     <p>
+      للاستفسارات: إدارة المدرسة
+     </p>
+    </div>
+   </div>
+  </footer>
+  <script src="js/app.js">
+  </script>
+ </body>
+</html>
